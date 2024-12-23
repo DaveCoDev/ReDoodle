@@ -1,0 +1,6 @@
+# Project Specific
+poetry.lock
+*.db
+
+# General
+.cursorrules

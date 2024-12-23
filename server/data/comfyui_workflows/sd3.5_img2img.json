@@ -1,0 +1,133 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 782677745989652,
+      "steps": 2,
+      "cfg": 0.6,
+      "sampler_name": "euler",
+      "scheduler": "sgm_uniform",
+      "denoise": 0.85,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "16",
+        0
+      ],
+      "negative": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "ComfyUI_00048_.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "14",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ckpt_name": "sd3.5_large_turbo.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "16": {
+    "inputs": {
+      "text": "car doing a donut, realistic forest background",
+      "clip": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    }
+  },
+  "17": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "18": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "clip_g.safetensors",
+      "clip_name3": "t5xxl_fp8_e4m3fn_scaled.safetensors"
+    },
+    "class_type": "TripleCLIPLoader",
+    "_meta": {
+      "title": "TripleCLIPLoader"
+    }
+  }
+}
