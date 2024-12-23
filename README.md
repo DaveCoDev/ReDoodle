@@ -1,7 +1,7 @@
 # ReDoodle
 ReDoodle is a "daily" web puzzle game where you are given a starting image, and your goal is to transform it into a goal image through a series of prompts.
 
-
+https://github.com/user-attachments/assets/080f2a9d-2e88-4362-a4a4-a319004243a8
 
 This repo is meant as a proof of concept and is not production ready nor will it be maintained.
 
